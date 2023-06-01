@@ -1,10 +1,8 @@
 package com.ddeogip.todo.domain.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.ddeogip.todo.domain.enums.Role;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,10 +18,16 @@ public class User {
 
     private String nickname;
     private String password;
+    private String email;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @Builder
-    public User(String nickname, String password) {
+    public User(String nickname, String password, String email) {
         this.nickname = nickname;
         this.password = password;
+        this.email = email;
+        this.role = Role.GENERAL;
     }
 }

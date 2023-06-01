@@ -21,6 +21,8 @@ public class Todo {
     private Boolean complete;
     private LocalDateTime completeDate;
 
+    @ManyToOne
+    private Folder folder;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
