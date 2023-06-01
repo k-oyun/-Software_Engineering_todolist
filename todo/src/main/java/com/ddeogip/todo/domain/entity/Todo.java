@@ -17,6 +17,8 @@ public class Todo {
     private Long id;
 
     private String title;
+
+    private String content;
     private LocalDateTime limitDate;
     private Boolean complete;
     private LocalDateTime completeDate;
@@ -29,11 +31,18 @@ public class Todo {
     private User userId;
 
     @Builder
-    public Todo(String title, LocalDateTime limitDate, LocalDateTime completeDate, User userId) {
+    public Todo(String title, String content, LocalDateTime limitDate, LocalDateTime completeDate, User userId) {
         this.title = title;
+        this.content = content;
         this.limitDate = limitDate;
         this.complete = false;
         this.completeDate = completeDate;
         this.userId = userId;
+    }
+
+    public void update(String title, String content, LocalDateTime limitDate) {
+        this.title = title;
+        this.content = content;
+        this.limitDate = limitDate;
     }
 }

@@ -20,9 +20,12 @@ public class Comment {
     @JoinColumn(name = "friend_id")
     private User friend;
 
+    private Todo todo;
+
     @Builder
-    public Comment(String content, User friend) {
+    public Comment(String content, User friend, Todo todo) {
         this.content = content;
         this.friend = friend;
+        this.todo = todo;
     }
 }
