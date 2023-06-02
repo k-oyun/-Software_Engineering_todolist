@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
 @NoArgsConstructor
 @Entity
 public class Comment {
@@ -22,7 +21,7 @@ public class Comment {
 
     private Todo todo;
 
-    @Builder
+
     public Comment(String content, User friend, Todo todo) {
         this.content = content;
         this.friend = friend;

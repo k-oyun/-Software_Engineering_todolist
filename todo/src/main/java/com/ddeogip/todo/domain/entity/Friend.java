@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
 @NoArgsConstructor
 @Entity
 public class Friend {
@@ -21,7 +20,6 @@ public class Friend {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @Builder
     public Friend(User friend, User user) {
         this.friend = friend;
         this.user = user;

@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Getter
 @NoArgsConstructor
 @Entity
 public class Todo {
@@ -30,7 +29,6 @@ public class Todo {
     @JoinColumn(name = "user_id")
     private User userId;
 
-    @Builder
     public Todo(String title, String content, LocalDateTime limitDate, LocalDateTime completeDate, User userId) {
         this.title = title;
         this.content = content;

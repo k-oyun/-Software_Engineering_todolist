@@ -7,7 +7,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
 @NoArgsConstructor
 @Entity
 public class User {
@@ -23,7 +22,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @Builder
+
     public User(String nickname, String password, String email) {
         this.nickname = nickname;
         this.password = password;
