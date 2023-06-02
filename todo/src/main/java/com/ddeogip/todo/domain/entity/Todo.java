@@ -27,15 +27,15 @@ public class Todo {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User userId;
+    private User user;
 
-    public Todo(String title, String content, LocalDateTime limitDate, LocalDateTime completeDate, User userId) {
+    public Todo(String title, String content, LocalDateTime limitDate, LocalDateTime completeDate, User user) {
         this.title = title;
         this.content = content;
         this.limitDate = limitDate;
         this.complete = false;
         this.completeDate = completeDate;
-        this.userId = userId;
+        this.user = user;
     }
 
     public void update(String title, String content, LocalDateTime limitDate) {

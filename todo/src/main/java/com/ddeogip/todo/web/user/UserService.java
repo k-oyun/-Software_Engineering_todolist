@@ -19,6 +19,7 @@ public class UserService {
 
     public void save(UserSaveRequestDto requestDto) {
 
+        userRepository.save(requestDto.toEntity());
     }
 
     public void delete(Long id) {
@@ -34,7 +35,7 @@ public class UserService {
     }
 
     public UserResponseDto getUser(Long id) {
-
+        return new UserResponseDto();
     }
 
     public void login(LoginRequestDto requestDto) {

@@ -1,6 +1,8 @@
 package com.ddeogip.todo.web.friend;
 
+import com.ddeogip.todo.domain.entity.Friend;
 import com.ddeogip.todo.domain.repository.FriendRepository;
+import com.ddeogip.todo.domain.repository.UserRepository;
 import com.ddeogip.todo.web.friend.dto.FriendRequestDto;
 import com.ddeogip.todo.web.friend.dto.FriendResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -12,16 +14,17 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FriendService {
     private final FriendRepository friendRepository;
+    private final UserRepository userRepository;
 
-    private void save( FriendRequestDto requestDto) {
-
-    }
-
-    private void delete( FriendRequestDto requestDto) {
+    public void save( FriendRequestDto requestDto) {
 
     }
 
-    private List<FriendResponseDto> getFriendList(Long id) {
+    public void delete(Long id) {
 
+    }
+
+    public List<FriendResponseDto> getFriendList(Long id) {
+        FriendResponseDto friendResponseDto = new FriendResponseDto();
     }
 }

@@ -14,15 +14,15 @@ import java.util.List;
 public class FriendController {
     private final FriendService friendService;
 
-    private void save(@RequestBody FriendRequestDto requestDto) {
+    public void save(@RequestBody FriendRequestDto requestDto) {
 
     }
 
-    private void delete(@RequestBody FriendRequestDto requestDto) {
+    public void delete(@PathVariable Long id) {
 
     }
 
-    private List<FriendResponseDto> getFriendList(@PathVariable Long id) {
+    public List<FriendResponseDto> getFriendList(@PathVariable Long id) {
 
     }
 }

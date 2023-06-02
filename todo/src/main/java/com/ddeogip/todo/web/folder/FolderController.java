@@ -13,19 +13,19 @@ public class FolderController {
 
     private final FolderService folderService;
 
-    private void save(@RequestBody FolderRequestDto requestDto) {
+    public void save(@RequestBody FolderRequestDto requestDto) {
 
     }
 
-    private void update(@RequestBody FolderRequestDto requestDto) {
+    public void update(@RequestBody FolderRequestDto requestDto) {
 
     }
 
-    private void delete(@PathVariable Long id) {
+    public void delete(@PathVariable Long id) {
 
     }
 
-    private List<FolderResponseDto> getFolderList(@PathVariable Long user_id) {
+    public List<FolderResponseDto> getFolderList(@PathVariable Long user_id) {
 
     }
 }
